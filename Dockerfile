@@ -1,4 +1,4 @@
-FROM php:7.2-fpm
+FROM php:7.3-fpm
 
 # Get repository and install wget and vim
 RUN apt-get update && apt-get install -y \
@@ -43,7 +43,6 @@ RUN pecl install sqlsrv pdo_sqlsrv
 
 RUN docker-php-ext-install \
 iconv \
-mcrypt \
 sockets \
 pdo \
 pdo_mysql \
