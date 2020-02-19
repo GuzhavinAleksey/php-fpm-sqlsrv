@@ -6,12 +6,10 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     gnupg \
     cron \
-    libxslt-dev \
     software-properties-common \
     apt-transport-https \
     libxml2-dev \
-    unixodbc-dev \
-    libzip-dev
+    unixodbc-dev
 
 # necessário para sqlsrv
 RUN wget -qO - https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
@@ -25,8 +23,6 @@ libfreetype6-dev \
 libjpeg62-turbo-dev \
 libmcrypt-dev \
 libpng-dev \
-libjpeg-dev \
-libmagickwand-dev \
 zlib1g-dev \
 libicu-dev \
 g++ \
@@ -53,13 +49,7 @@ pdo \
 pdo_mysql \
 && docker-php-ext-enable \
 sqlsrv \
-pdo_sqlsrv \
-xsl \
-exif \
-xml \
-zip \
-bcmath \
-xmlrpc 
+pdo_sqlsrv
 
 # Clean repository
 RUN apt-get autoremove -y && \
