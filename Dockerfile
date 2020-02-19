@@ -60,7 +60,6 @@ RUN set -ex; \
         pdo \
         gd \
         pdo_mysql \
-        && docker-php-ext-enable \
         sqlsrv \
         pdo_sqlsrv \
         gettext \
@@ -72,7 +71,7 @@ RUN set -ex; \
         zip \
         bcmath \
         xmlrpc \
-	    intl \
+	intl \
         soap \
         opcache \
 	; \
