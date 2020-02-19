@@ -6,10 +6,12 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     gnupg \
     cron \
+    libxslt-dev \
     software-properties-common \
     apt-transport-https \
     libxml2-dev \
-    unixodbc-dev
+    unixodbc-dev \
+    libzip-dev
 
 # necessário para sqlsrv
 RUN wget -qO - https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
@@ -23,6 +25,8 @@ libfreetype6-dev \
 libjpeg62-turbo-dev \
 libmcrypt-dev \
 libpng-dev \
+libjpeg-dev \
+libmagickwand-dev \
 zlib1g-dev \
 libicu-dev \
 g++ \
@@ -47,6 +51,12 @@ iconv \
 sockets \
 pdo \
 pdo_mysql \
+xsl \
+exif \
+xml \
+zip \
+bcmath \
+xmlrpc \
 && docker-php-ext-enable \
 sqlsrv \
 pdo_sqlsrv
